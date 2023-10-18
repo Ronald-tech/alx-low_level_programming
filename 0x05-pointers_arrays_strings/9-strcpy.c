@@ -6,6 +6,7 @@
  * @src: chat type string
  * Description: Copy the string pointed to by pointer 'src' to
  * the buffer pointed to the 'dest'
+ * Return: pointer to 'dest'
  */
 
 char *_strcpy(char *dest, char *src)
