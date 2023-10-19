@@ -23,7 +23,7 @@ char *leet(char *c)
 				*c = 48 + value[i];
 			}
 		}
-		c++
+		c++;
 	}
 
 	return (cp);
