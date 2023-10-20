@@ -1,17 +1,18 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string rot13
- * @s: inpput string
+ * rot13 - encodes a string using rot13
+ * @s: input string
  * Return: string that is encoded
  */
 
 char *rot13(char *s)
 {
+	int i;
+
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLMN";
 	char *ptr = s;
-	unsigned int i;
 
 	while (*s)
 	{
@@ -19,7 +20,7 @@ char *rot13(char *s)
 		{
 			if (*s == rot13[i])
 			{
-				*s = ROT[i];
+				*s = ROT13[i];
 				break;
 			}
 		}
