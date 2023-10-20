@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_number - print ann integer
+ * print_number - prints an integer
  * @n: The integer to print
  * Return: 0
  */
@@ -23,5 +23,5 @@ void print_number(int n)
 
 	if (k != 0)
 		print_number(k);
-	_putchar((unsigned int)n % 10 + '0');
+	_putchar((unsigned int) n % 10 + '0');
 }
