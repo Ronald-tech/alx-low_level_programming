@@ -27,7 +27,7 @@ int inception(char *s1, char *s2)
 {
 	int ret = 0;
 
-	if (*s22 == 0)
+	if (*s2 == 0)
 		return (0);
 	if (*s1 == *s2)
 		ret += wildcmp(s1 + 1, s2 + 1);
