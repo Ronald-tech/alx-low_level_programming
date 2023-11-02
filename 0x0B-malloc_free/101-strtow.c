@@ -37,12 +37,12 @@ char **strtow(char *str)
 	int i, j, k, l, n = 0, wc = 0;
 	char **w;
 
-	if (str == NULL || *STR == '\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	n = wrdcnt(str);
 	if (n == 1)
 		return (NULL);
-	w = (char **)malloc(n * sizeof(char 8));
+	w = (char **)malloc(n * sizeof(char *));
 	if (w == NULL)
 		return (NULL);
 	w[n - 1] = NULL;
@@ -64,7 +64,7 @@ char **strtow(char *str)
 				free(w);
 				return (NULL);
 			}
-			for  (l = 0; l < jjj; l++)
+			for  (l = 0; l < j; l++)
 				w[wc][l] = str[i + l];
 			w[wc][l] = '\0';
 			wc++;
