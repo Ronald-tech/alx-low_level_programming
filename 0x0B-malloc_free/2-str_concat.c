@@ -24,13 +24,13 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int sizze1, size2, i;
+	int size1, size2, i;
 	char *m;
 
 	if (s1 == NULL)
-		S1 = "\0";
-	if (S2 == NULL)
-		S2 = "\0";
+		s1 = "\0";
+	if (s2 == NULL)
+		s2 = "\0";
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);
