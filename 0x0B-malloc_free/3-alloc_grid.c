@@ -26,12 +26,12 @@ int **alloc_grid(int width, int height)
 			{
 				/*Free everything if malloc fails*/
 				while (i--)
-					fre(tab[i]);
+					free(tab[i]);
 				free(tab);
 				return (NULL);
 			}
 			for (j = 0; j < width; j++)
-				tab[]i[j] = 0;
+				tab[i][j] = 0;
 		}
 	}
 	return (tab);
