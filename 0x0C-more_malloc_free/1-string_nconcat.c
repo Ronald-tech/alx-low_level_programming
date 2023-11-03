@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (s2_length = 0; s2[s2_length] != '\0'; s2_length++)
 		;
 	/*Memory reservation for case 1 & case 2*/
-	str = malloc(s1_lenth + n + 1);
+	str = malloc(s1_length + n + 1);
 	if (str == NULL)
 	{
 		return (NULL);
@@ -35,7 +35,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != '\0'; i++)
 		str[i] = s1[i];
 	/*Copy second string into str*/
-
 	for (j = 0; j < n; j++)
 	{
 		str[i] = s2[j];
