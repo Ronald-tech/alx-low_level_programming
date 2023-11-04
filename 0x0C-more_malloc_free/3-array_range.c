@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * array_range - creates an array of integers
@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	ptr = malloc(sizeof(int) * len);
 	if (!ptr)
 		return (NULL);
-	for (i = 0; i < len; l++)
+	for (i = 0; i < len; i++)
 		ptr[i] = min++;
 	return (ptr);
 }
