@@ -2,7 +2,7 @@
 
 /**
  * print_listint - prints a linked lists
- * @n: pointer to first node
+ * @h: pointer to first node
  *
  * Return: size of list
  */
