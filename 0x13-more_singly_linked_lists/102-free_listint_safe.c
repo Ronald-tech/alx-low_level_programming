@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * find_listint_loop_fl - finds a loop in a linked list
+ * find_listint_loop - finds a loop in a linked list
  *
  * @head: linked list to search
  *
