@@ -13,14 +13,14 @@ void print_magic(Elf64_Ehdr h)
 
 	printf("  Magic:  ");
 	for (i = 0; i < EI_NIDENT; i++)
-		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT = 1 ? "\n" : " ");
+		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
 /**
  * print_class - prints ELF class
  * @h: the ELF header struct
  */
-void print class(Elf64_Ehdr h)
+void print_class(Elf64_Ehdr h)
 {
 	printf("  class:			");
 	switch (h.e_ident[EI_CLASS])
@@ -84,7 +84,7 @@ void print_version(Elf64_Ehdr h)
  */
 void print_osabi(Elf64_Ehdr h)
 {
-	print(" OS/ABI:				");
+	printf(" OS/ABI:				");
 	switch (h.e_ident[EI_OSABI])
 	{
 	case ELFOSABI_NONE:
@@ -250,6 +250,7 @@ int main(int ac, char **av)
 	}
 	else
 		dprintf(STDERR_FILENO, "Not ELF file: %s\n", av[1]), exit(98);
+
 	print_magic(h);
 	print_class(h);
 	print_data(h);
