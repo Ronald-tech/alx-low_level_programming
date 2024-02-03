@@ -4,6 +4,7 @@
  * hash_table_print - prints a hash table
  * @ht: hash table to print
  *
+ * Return: void
  */
 void hash_table_print(const hash_table_t *ht)
 {
@@ -13,14 +14,14 @@ void hash_table_print(const hash_table_t *ht)
 
 	if (ht == NULL || ht->array == NULL)
 		return;
-	print ("{");
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		tmp = ht->array[i];
 		while (tmp != NULL)
 		{
 			if (flag == 1)
-				print(", ");
+				printf(", ");
 			printf("'%s': '%s'", tmp->key, tmp->value);
 			flag = 1;
 			tmp = tmp->next;
